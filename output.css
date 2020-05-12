@@ -1,0 +1,136 @@
+.page-container {
+  width: 100%;
+  height: 100%;
+  background: #479491;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid #dfdada;
+  padding-bottom: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-shadow: 6px 7px 56px 7px #23363a;
+  -moz-box-shadow: 6px 7px 56px 7px #23363a;
+  box-shadow: 6px 7px 56px 7px #23363a;
+}
+.container--header {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  background-size: cover;
+  color: white;
+}
+.container--header .temperature {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+main {
+  background: white;
+  height: 220px;
+  overflow-y: scroll;
+}
+main table {
+  width: 100%;
+}
+main table .days {
+  margin-left: 30px;
+  color: #636060;
+}
+
+main table .table-data .fa {
+  padding-right: 10px;
+}
+main .news-table {
+  width: 100%;
+  display: none;
+  padding-top: 1rem;
+}
+main .news-table .table-data-image {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  padding-left: 2rem;
+}
+main .news-table .table-text {
+  padding-left: 10px;
+  padding-right: 30px;
+  line-height: 20px;
+  color: gray;
+}
+main .news-table img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav {
+  background: white;
+}
+nav .ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 20px 0 20px 0;
+}
+nav .ul .list-item {
+  color: #b6b1b1;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=output.css.map */
+
+.photos-table {
+  display: none;
+}
+.news-one-url {
+  display: block;
+}
+.photos {
+  display: flex;
+  flex-direction: column;
+}
+
+.days {
+  padding: 5px 0;
+}
+
+.main table .table-data {
+  padding-bottom: 1rem;
+}
+
+a {
+  color: #479491;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .main {
+    height: 100%;
+  }
+  .page-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

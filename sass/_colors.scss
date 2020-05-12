@@ -1,0 +1,11 @@
+$background-page: #479491;
+$background-main: white;
+$text-color-main: gray;
+$header-text: white;
+
+
+@mixin box-shadow {
+    -webkit-box-shadow: 6px 7px 56px 7px #23363a;
+    -moz-box-shadow: 6px 7px 56px 7px #23363a;
+    box-shadow:6px 7px 56px 7px #23363a;
+}

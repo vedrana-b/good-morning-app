@@ -1,0 +1,28 @@
+@import "variables";
+
+
+@mixin page-container($width, $background-page, $padding){
+    width: $width;
+    height: $width;
+    background: $background-page;
+    padding-top: $padding;
+    padding-bottom: $padding * 2;
+}
+
+
+@mixin  active($active-font-weight, $active-border, $active-padding, $active-color) {
+    font-weight: $active-font-weight;
+    border-bottom: $active-border;
+    padding-bottom: $active-padding;
+    color: $active-color;
+    cursor: pointer;
+}
+
+@mixin header($padding-header, $background-size, $header-text){
+
+    padding-top: $padding-header;
+    padding-bottom: $padding-header;
+    background: url(img/snoww.jpg);
+    background-size: cover;
+    color: $header-text;
+}

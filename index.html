@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="output.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div id="container" class="container">
+            <header class="container--header">
+                <h2 id="weather-text"></h2>
+                <h3 id="city"></h3>
+                <h1 id="current-temp" class="temperature"></h1>
+            </header>
+            <nav>
+                <ul class="ul" id="menu">
+                    <li id="temp" class="active" href="#temp-table"> Weather</li>
+                    <li id="news" class="list-item" href="#news-table"> News </li>
+                    <li id="photos" class="list-item" href="#table-photos"> Photos </li>
+                </ul>
+            </nav>
+            <main id="main" class="main">
+                <table id="temp-table">
+                    <tbody>
+                        <tr>
+                            <td class="days table-data" id="day-one">
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </td>
+                            <td class="table-data" id="day-one-temp">
+
+                            </td>
+                            <td class="table-data">
+                                <img id="day-one-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="days table-data" id="day-two">
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </td>
+                            <td class="table-data" id="day-two-temp">
+
+                            </td>
+                            <td class="table-data">
+                                <img id="day-two-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="days table-data" id="day-three">
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </td>
+                            <td class="table-data" id="day-three-temp">
+                            </td>
+                            <td class="table-data">
+                                <img id="day-three-icon">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="days table-data" id="day-four">
+                                <i class="fa fa-caret-right" aria-hidden="true"></i>
+                            </td>
+                            <td class="table-data" id="day-four-temp">
+                            </td>
+                            <td class="table-data">
+                                <img id="day-four-icon">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="news-table" id="news-table">
+                    <tbody>
+                        <tr>
+                            <td class="table-data">
+                                <div class="table-data-image">
+                                    <img id="news-one-img">
+                                </div>
+                            </td>
+                            <td class="table-data table-text" id="news-one">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-data">
+                                <div class="table-data-image">
+                                    <img id="news-two-img">
+                                </div>
+                            </td>
+                            <td class="table-data table-text" id="news-two">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-data">
+                                <div class="table-data-image">
+                                    <img id="news-three-img">
+                                </div>
+                            </td>
+                            <td class="table-data table-text" id="news-three">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-data">
+                                <div class="table-data-image">
+                                    <img id="news-four-img">
+                                </div>
+                            </td>
+                            <td class="table-data table-text" id="news-four">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table id="photos-table" class="photos-table">
+                    <tbody>
+                        <tr class="photos">
+                            <td>
+                                <div>
+                                    <img id="img-one" />
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img id="img-two" />
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img id="img-three" />
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img id="img-four" />
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="ajax.js"></script>
+    <script src="weather.js"></script>
+</body>
+
+</html>

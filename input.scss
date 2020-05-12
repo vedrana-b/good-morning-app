@@ -1,0 +1,99 @@
+@import "sass/colors";
+@import "sass/variables";
+@import "sass/mixins";
+
+.page-container{
+    @include page-container(100%, $background-page, $padding);
+}
+
+.active{
+    @include active($active, $active-border, 10px, black);
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    @include box-shadow;
+    &--header {
+        padding-top: $padding-header;
+        padding-bottom: $padding-header;
+        background: url(img/snoww.jpg);
+        background-size: cover;
+        color: $header-text;
+            .temperature {
+                font-size: 4em;
+                font-weight: $header-font-weight;
+        }
+    }
+}
+
+main {
+    background: $background-main;
+    height: $main-height;
+    overflow-y: scroll;
+
+    table {
+        width: 100%;
+        .days {
+            float: left;
+            margin-left: 30px;
+            color: rgb(99, 96, 96);
+            }
+        .table-data {
+            padding: 20px 0;
+        .fa {
+            padding-right: 10px;
+            }
+        }
+    }   
+
+    .news-table {
+        width: 100%;
+        display: block;
+
+        .table-data-image {
+            width: $table-data-img_width;
+            height: $table-data-img_width;
+            overflow: hidden;
+        }
+        .table-text {
+            padding-left: 10px;
+            padding-right: 30px;
+            line-height: 20px;
+            color: gray;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 999px;
+        }
+    }
+}
+
+
+nav {
+    background: $background-main;
+    .ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        margin: 0;
+        padding: $padding-list 0 $padding-list 0;
+
+        .list-item {
+        color: rgb(182, 177, 177);
+        cursor: pointer;
+        }
+
+    }
+}
+
+
