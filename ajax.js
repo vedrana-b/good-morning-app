@@ -19,7 +19,7 @@ $(document).ready(function () {
                     }
                 });
 
-                let currentTempUrl = `http://dataservice.accuweather.com/currentconditions/v1/298198?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV`
+                let currentTempUrl = `https://dataservice.accuweather.com/currentconditions/v1/298198?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV`
                 $.ajax({
                     url: currentTempUrl,
                     type: "GET",
@@ -30,8 +30,7 @@ $(document).ready(function () {
                     }
                 });
 
-
-                let forecastUrl = `http://dataservice.accuweather.com/forecasts/v1/daily/5day/298198?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV&metric=true`
+                let forecastUrl = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/298198?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV&metric=true`
                 $.ajax({
                     url: forecastUrl,
                     type: "GET",
@@ -104,12 +103,11 @@ $(document).ready(function () {
                     }
                 });
 
-
                 $.ajax({
                     url: 'https://api.unsplash.com/photos/random?client_id=dCQBiBW5-qkFQjqs-HZ7pdvW0XOJhvniCh6HEfrJJU8&count=5',
                     type: "GET",
                     success: function (data) {
-                        console.log(data);
+                        //console.log(data);
                         $('#img-one').attr('src', data[0].urls.small);
                         $('#img-two').attr('src', data[1].urls.small);
                         $('#img-three').attr('src', data[2].urls.small);
@@ -117,14 +115,9 @@ $(document).ready(function () {
                         $('.container--header').css('background-image', 'url(' + data[3].urls.regular + ')');
                     }
                 });
-
-
-
             });
         } else {
             alert("Geolocation is not supported by this browser.");
         }
     } currentTemp();
-
-
 });
