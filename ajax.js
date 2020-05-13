@@ -8,7 +8,7 @@ $(document).ready(function () {
                 $('main').css('display', 'block');
                 lat = position.coords.latitude;
                 lon = position.coords.longitude;
-                let url = `https:/dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV&q=${lat}%2C${lon}`;
+                let url = `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=7G6lZU28Cy4TNywTtggI11Vt8cWiLTZV&q=${lat}%2C${lon}`;
                 //Get info depending on browser geolocation
                 $.ajax({
                     url: url,
