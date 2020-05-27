@@ -76,30 +76,32 @@ $(document).ready(function () {
                 });
 
                 $.ajax({
-                    url: 'https://newsapi.org/v2/top-headlines?country=us&apiKey=74cb5baaf776491b91f4f0d54f522247',
-                    type: "GET",
+                    async: true,
+	                crossDomain: true,
+                    url: "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=tJzD2tCqAJKkAeghB7Uc6ZS2Y1ONVcju",
+                    method: "GET",
                     success: function (data) {
-                        //console.log(data.articles['0'].title);
+                        let news = data.results;
                         $('#news-two').append('<a id="news-two-url"></a>')
-                        $('#news-two-url').html(data.articles['1'].title);
-                        $('#news-two-url').attr('href', data.articles['1'].url);
+                        $('#news-two-url').html(news['0'].title);
+                        $('#news-two-url').attr('href', news['0'].url);
 
                         $('#news-three').append('<a id="news-three-url"></a>')
-                        $('#news-three-url').html(data.articles['2'].title);
-                        $('#news-three-url').attr('href', data.articles['2'].url);
+                        $('#news-three-url').html(news['2'].title);
+                        $('#news-three-url').attr('href', news['0'].url);
 
                         $('#news-one').append('<a id="news-one-url"></a>')
-                        $('#news-one-url').html(data.articles['0'].title);
-                        $('#news-one-url').attr('href', data.articles['0'].url);
+                        $('#news-one-url').html(news['1'].title);
+                        $('#news-one-url').attr('href', news['0'].url);
 
                         $('#news-four').append('<a id="news-four-url"></a>')
-                        $('#news-four-url').html(data.articles['3'].title);
-                        $('#news-four-url').attr('href', data.articles['3'].url);
+                        $('#news-four-url').html(news['3'].title);
+                        $('#news-four-url').attr('href', news['0'].url);
 
-                        $('#news-one-img').attr('src', data.articles['0'].urlToImage);
-                        $('#news-two-img').attr('src', data.articles['1'].urlToImage);
-                        $('#news-three-img').attr('src', data.articles['2'].urlToImage);
-                        $('#news-four-img').attr('src', data.articles['3'].urlToImage);
+                        $('#news-one-img').attr('src', news['0'].multimedia['0'].url);
+                        $('#news-two-img').attr('src', news['1'].multimedia['1'].url);
+                        $('#news-three-img').attr('src', news['2'].multimedia['2'].url);
+                        $('#news-four-img').attr('src', news['3'].multimedia['3'].url);
                     }
                 });
 
